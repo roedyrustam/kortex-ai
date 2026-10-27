@@ -33,12 +33,12 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
           {/* Logo & Brand */}
           <div className="flex items-center gap-3">
             <a href="#" className="flex items-center gap-2.5 group">
-              <div className="w-8 h-8 rounded-lg bg-neutral-900 border border-white/15 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/50 transition-colors shadow-sm">
-                <Zap className="w-4 h-4 fill-emerald-400/20 text-emerald-400 transition-transform group-hover:scale-110" />
+              <div className="w-8 h-8 rounded-lg bg-neutral-900 border border-white/15 flex items-center justify-center text-amber-400 group-hover:border-amber-500/50 transition-colors shadow-sm">
+                <Zap className="w-4 h-4 fill-amber-400/20 text-amber-400 transition-transform group-hover:scale-110" />
               </div>
               <div className="flex items-baseline gap-1.5">
                 <span className="font-semibold text-white tracking-tight text-base font-sans">SinapsAI</span>
-                <span className="text-[10px] font-mono font-medium px-1.5 py-0.5 rounded bg-emerald-950/80 text-emerald-400 border border-emerald-500/30">
+                <span className="text-[10px] font-mono font-medium px-1.5 py-0.5 rounded bg-amber-950/80 text-amber-400 border border-amber-500/30">
                   v1.2.0
                 </span>
                 <span className="hidden sm:inline-block text-[10px] font-mono text-neutral-400 px-1 py-0.2 rounded border border-white/5 bg-white/[0.02]">
@@ -52,7 +52,7 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
           <nav className="hidden md:flex items-center gap-7 text-sm">
             <a
               href="#playground"
-              className="text-emerald-400 hover:text-emerald-300 font-medium transition-colors duration-200 flex items-center gap-1"
+              className="text-amber-400 hover:text-amber-300 font-medium transition-colors duration-200 flex items-center gap-1"
             >
               <span>Playground</span>
             </a>
@@ -99,14 +99,14 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
             >
               <GithubIcon className="w-3.5 h-3.5" />
               <span>GitHub</span>
-              <span className="text-[10px] text-emerald-400 font-sans ml-1">★ 404 tests</span>
+              <span className="text-[10px] text-amber-400 font-sans ml-1">★ 404 tests</span>
             </a>
 
             <a
               href="https://www.npmjs.com/package/sinapsai"
               target="_blank"
               rel="noreferrer"
-              className="relative inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 text-xs font-medium text-neutral-950 bg-emerald-400 hover:bg-emerald-300 rounded-md transition-all duration-200 shadow-[0_0_20px_-3px_rgba(16,185,129,0.45)] hover:shadow-[0_0_25px_-1px_rgba(16,185,129,0.6)] active:scale-95 font-sans"
+              className="relative inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 text-xs font-medium text-neutral-950 bg-amber-400 hover:bg-amber-300 rounded-md transition-all duration-200 shadow-[0_0_20px_-3px_rgba(245,158,11,0.45)] hover:shadow-[0_0_25px_-1px_rgba(245,158,11,0.6)] active:scale-95 font-sans"
             >
               <span>npm i sinapsai</span>
               <ChevronRight className="w-3.5 h-3.5" />
@@ -118,7 +118,7 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-neutral-400 hover:text-white p-2 rounded-md hover:bg-neutral-900 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+              className="text-neutral-400 hover:text-white p-2 rounded-md hover:bg-neutral-900 focus:outline-none focus:ring-1 focus:ring-amber-500"
               aria-label="Toggle Navigation Menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -134,7 +134,7 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
             <a
               href="#playground"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-emerald-400 hover:text-emerald-300 font-medium py-1"
+              className="text-amber-400 hover:text-amber-300 font-medium py-1"
             >
               Playground & Calculator
             </a>
@@ -188,7 +188,7 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
               href="https://www.npmjs.com/package/sinapsai"
               target="_blank"
               rel="noreferrer"
-              className="w-full py-2.5 text-xs font-medium text-neutral-950 bg-emerald-400 hover:bg-emerald-300 rounded-md transition-colors text-center"
+              className="w-full py-2.5 text-xs font-medium text-neutral-950 bg-amber-400 hover:bg-amber-300 rounded-md transition-colors text-center"
             >
               npm install sinapsai
             </a>

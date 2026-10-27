@@ -12,8 +12,8 @@ export function BentoGrid() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col items-start max-w-2xl mb-16">
-          <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-widest mb-3">
-            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+          <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest mb-3">
+            <span className="w-2 h-2 rounded-full bg-amber-400" />
             <span>Autonomous Resilience Engine</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-white mb-4">
@@ -45,7 +45,7 @@ export function BentoGrid() {
               <div className="flex items-center justify-between text-neutral-500 pb-3 border-b border-white/5 mb-4">
                 <span>CIRCUIT BREAKER STATE MACHINE</span>
                 <span className={`font-semibold ${
-                  breakerState === 'CLOSED' ? 'text-emerald-400' : breakerState === 'OPEN' ? 'text-rose-400' : 'text-amber-400'
+                  breakerState === 'CLOSED' ? 'text-amber-400' : breakerState === 'OPEN' ? 'text-rose-400' : 'text-orange-400'
                 }`}>
                   STATE: {breakerState}
                 </span>
@@ -57,7 +57,7 @@ export function BentoGrid() {
                   onClick={() => setBreakerState('CLOSED')}
                   className={`p-3 rounded-lg border text-center transition-all cursor-pointer ${
                     breakerState === 'CLOSED'
-                      ? 'bg-emerald-950/80 border-emerald-500 text-emerald-300 ring-1 ring-emerald-500/50'
+                      ? 'bg-amber-950/80 border-amber-500 text-amber-300 ring-1 ring-amber-500/50'
                       : 'bg-white/[0.02] border-white/10 text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -83,7 +83,7 @@ export function BentoGrid() {
                   onClick={() => setBreakerState('HALF_OPEN')}
                   className={`p-3 rounded-lg border text-center transition-all cursor-pointer ${
                     breakerState === 'HALF_OPEN'
-                      ? 'bg-amber-950/80 border-amber-500 text-amber-300 ring-1 ring-amber-500/50'
+                      ? 'bg-orange-950/80 border-orange-500 text-orange-300 ring-1 ring-orange-500/50'
                       : 'bg-white/[0.02] border-white/10 text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -94,7 +94,7 @@ export function BentoGrid() {
 
               <div className="p-2.5 rounded bg-white/[0.02] border border-white/5 text-[11px] text-neutral-400 flex items-center justify-between">
                 <span>Config: failureThreshold: 3 | resetTimeoutMs: 30000 | recoverySuccessThreshold: 2</span>
-                <span className="text-emerald-400">Zero Added Overhead (&lt; 0.04ms)</span>
+                <span className="text-amber-400">Zero Added Overhead (&lt; 0.04ms)</span>
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@ export function BentoGrid() {
                 {piiMasked ? (
                   <>Contact user at <span className="px-1 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800">&lt;PII_EM_92A&gt;</span> with card <span className="px-1 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800">&lt;PII_CC_10B&gt;</span></>
                 ) : (
-                  <>Contact user at <span className="text-emerald-400">john.doe@company.com</span> with card <span className="text-emerald-400">4532-XXXX-XXXX-8921</span></>
+                  <>Contact user at <span className="text-amber-400">john.doe@company.com</span> with card <span className="text-amber-400">4532-XXXX-XXXX-8921</span></>
                 )}
               </p>
             </div>
@@ -163,7 +163,7 @@ export function BentoGrid() {
           {/* Bento Card 4: Zero-Dependency Semantic Caching (Span 1) */}
           <div className="rounded-2xl bg-gradient-to-b from-neutral-900/60 to-neutral-900/20 border border-white/[0.08] p-6 sm:p-8 flex flex-col justify-between relative hover:border-white/[0.18] transition-all">
             <div>
-              <div className="w-10 h-10 rounded-lg bg-emerald-950/60 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+              <div className="w-10 h-10 rounded-lg bg-amber-950/60 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
                 <Zap className="w-5 h-5" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">
@@ -177,10 +177,10 @@ export function BentoGrid() {
             <div className="p-3.5 rounded-xl bg-[#0b0c10] border border-white/10 font-mono text-[11px]">
               <div className="flex items-center justify-between text-neutral-500 pb-2 mb-2 border-b border-white/5">
                 <span>SIMILARITY THRESHOLD</span>
-                <span className="text-emerald-400 font-semibold">0.85 Cosine</span>
+                <span className="text-amber-400 font-semibold">0.85 Cosine</span>
               </div>
               <div className="w-full bg-neutral-800 h-2 rounded-full overflow-hidden mb-2">
-                <div className="bg-emerald-400 h-full w-[94%]" />
+                <div className="bg-amber-400 h-full w-[94%]" />
               </div>
               <span className="text-neutral-400 text-[10px]">Score 0.94 → Cache Hit (0.3ms latency)</span>
             </div>
@@ -203,7 +203,7 @@ export function BentoGrid() {
             <div className="p-3.5 rounded-xl bg-[#0b0c10] border border-white/10 font-mono text-[11px] flex items-center justify-between">
               <div>
                 <span className="text-neutral-500 block text-[10px]">P99 TAIL LATENCY</span>
-                <span className="text-emerald-400 font-semibold text-sm">Reduced by 72%</span>
+                <span className="text-amber-400 font-semibold text-sm">Reduced by 72%</span>
               </div>
               <span className="text-[10px] px-2 py-1 rounded bg-amber-950/80 text-amber-300 border border-amber-800">
                 hedgeDelayMs: 350

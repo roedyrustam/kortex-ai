@@ -37,7 +37,7 @@ export function WaitlistModal({ isOpen, onClose, defaultPlan }: WaitlistModalPro
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
       <div className="relative w-full max-w-md rounded-2xl bg-[#0d0e12] border border-white/15 p-6 sm:p-8 shadow-2xl overflow-hidden">
         {/* Background glow */}
-        <div className="absolute top-0 right-0 w-48 h-48 bg-emerald-500/10 blur-[60px] rounded-full pointer-events-none" />
+        <div className="absolute top-0 right-0 w-48 h-48 bg-amber-500/10 blur-[60px] rounded-full pointer-events-none" />
 
         {/* Close Button */}
         <button
@@ -51,7 +51,7 @@ export function WaitlistModal({ isOpen, onClose, defaultPlan }: WaitlistModalPro
 
         {success ? (
           <div className="py-8 text-center flex flex-col items-center">
-            <div className="w-12 h-12 rounded-full bg-emerald-950/80 border border-emerald-500/40 flex items-center justify-center text-emerald-400 mb-4 shadow-[0_0_20px_rgba(16,185,129,0.3)]">
+            <div className="w-12 h-12 rounded-full bg-amber-950/80 border border-amber-500/40 flex items-center justify-center text-amber-400 mb-4 shadow-[0_0_20px_rgba(245,158,11,0.3)]">
               <CheckCircle2 className="w-6 h-6" />
             </div>
             <h3 className="text-xl font-semibold text-white mb-2">Cluster Key Provisioned</h3>
@@ -64,7 +64,7 @@ export function WaitlistModal({ isOpen, onClose, defaultPlan }: WaitlistModalPro
                 setSuccess(false);
                 onClose();
               }}
-              className="w-full py-2.5 rounded-lg text-xs font-semibold text-neutral-950 bg-emerald-400 hover:bg-emerald-300 transition-colors"
+              className="w-full py-2.5 rounded-lg text-xs font-semibold text-neutral-950 bg-amber-400 hover:bg-amber-300 transition-colors"
             >
               Return to Architecture
             </button>
@@ -72,10 +72,10 @@ export function WaitlistModal({ isOpen, onClose, defaultPlan }: WaitlistModalPro
         ) : (
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-7 h-7 rounded-md bg-neutral-900 border border-white/15 flex items-center justify-center text-emerald-400">
+              <div className="w-7 h-7 rounded-md bg-neutral-900 border border-white/15 flex items-center justify-center text-amber-400">
                 <Cpu className="w-4 h-4" />
               </div>
-              <span className="text-xs font-mono font-medium text-emerald-400 uppercase tracking-wider">
+              <span className="text-xs font-mono font-medium text-amber-400 uppercase tracking-wider">
                 Early Access Cohort
               </span>
             </div>
@@ -103,7 +103,7 @@ export function WaitlistModal({ isOpen, onClose, defaultPlan }: WaitlistModalPro
                   name="email"
                   required
                   placeholder="alex@acme.engineering"
-                  className="w-full px-3.5 py-2 rounded-lg bg-neutral-900/80 border border-white/10 text-white placeholder:text-neutral-600 text-xs focus:outline-none focus:border-emerald-500 font-mono"
+                  className="w-full px-3.5 py-2 rounded-lg bg-neutral-900/80 border border-white/10 text-white placeholder:text-neutral-600 text-xs focus:outline-none focus:border-amber-500 font-mono"
                 />
               </div>
 
@@ -115,7 +115,7 @@ export function WaitlistModal({ isOpen, onClose, defaultPlan }: WaitlistModalPro
                   type="text"
                   name="fullName"
                   placeholder="Alex Mercer"
-                  className="w-full px-3.5 py-2 rounded-lg bg-neutral-900/80 border border-white/10 text-white placeholder:text-neutral-600 text-xs focus:outline-none focus:border-emerald-500 font-mono"
+                  className="w-full px-3.5 py-2 rounded-lg bg-neutral-900/80 border border-white/10 text-white placeholder:text-neutral-600 text-xs focus:outline-none focus:border-amber-500 font-mono"
                 />
               </div>
 
@@ -126,7 +126,7 @@ export function WaitlistModal({ isOpen, onClose, defaultPlan }: WaitlistModalPro
                 <select
                   name="sdkPreference"
                   defaultValue="typescript"
-                  className="w-full px-3.5 py-2 rounded-lg bg-neutral-900 border border-white/10 text-neutral-300 text-xs focus:outline-none focus:border-emerald-500 font-mono"
+                  className="w-full px-3.5 py-2 rounded-lg bg-neutral-900 border border-white/10 text-neutral-300 text-xs focus:outline-none focus:border-amber-500 font-mono"
                 >
                   <option value="typescript">TypeScript / Node.js</option>
                   <option value="python">Python 3.12+</option>
@@ -139,7 +139,7 @@ export function WaitlistModal({ isOpen, onClose, defaultPlan }: WaitlistModalPro
               <button
                 type="submit"
                 disabled={isPending}
-                className="w-full mt-2 py-2.5 px-4 rounded-lg text-xs font-semibold text-neutral-950 bg-emerald-400 hover:bg-emerald-300 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
+                className="w-full mt-2 py-2.5 px-4 rounded-lg text-xs font-semibold text-neutral-950 bg-amber-400 hover:bg-amber-300 transition-all flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 {isPending ? (
                   <>

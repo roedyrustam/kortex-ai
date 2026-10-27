@@ -9,19 +9,19 @@ export function Footer() {
           {/* Brand Col */}
           <div className="md:col-span-1 space-y-4">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-neutral-900 border border-white/15 flex items-center justify-center text-emerald-400">
-                <Zap className="w-3.5 h-3.5 fill-emerald-400/20 text-emerald-400" />
+              <div className="w-7 h-7 rounded-lg bg-neutral-900 border border-white/15 flex items-center justify-center text-amber-400">
+                <Zap className="w-3.5 h-3.5 fill-amber-400/20 text-amber-400" />
               </div>
               <span className="font-semibold text-white tracking-tight text-sm font-sans">SinapsAI</span>
-              <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-emerald-950 text-emerald-400 border border-emerald-800">
+              <span className="text-[10px] font-mono px-1.5 py-0.2 rounded bg-amber-950 text-amber-400 border border-amber-800">
                 v1.2.0
               </span>
             </div>
             <p className="text-neutral-400 text-xs leading-relaxed max-w-sm">
               High-performance, zero-dependency in-process AI gateway and smart router for Node.js, Edge Runtimes, and TypeScript.
             </p>
-            <div className="flex items-center gap-2 text-[11px] font-mono text-emerald-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <div className="flex items-center gap-2 text-[11px] font-mono text-amber-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
               <span>404 Tests Passing • Zero Runtime Dependencies</span>
             </div>
           </div>
@@ -101,7 +101,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-neutral-500 font-mono">
-          <p>© {new Date().getFullYear()} SinapsAI. Released under the MIT License by Roedy Rustam.</p>
+          <p suppressHydrationWarning>© 2026 SinapsAI. Released under the MIT License by Roedy Rustam.</p>
           <div className="flex items-center gap-4">
             <a
               href="https://github.com/roedyrustam/sinapsai"
@@ -121,7 +121,7 @@ export function Footer() {
               npm
             </a>
             <span className="text-neutral-700">•</span>
-            <span className="text-emerald-400">Zero Dependencies</span>
+            <span className="text-amber-400">Zero Dependencies</span>
           </div>
         </div>
       </div>

@@ -120,14 +120,14 @@ export function ArchitectureShowcase() {
   return (
     <section id="architecture" className="py-24 md:py-32 bg-[#090a0d] border-t border-white/[0.08] relative overflow-hidden">
       {/* Background Glows */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/5 blur-[120px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-sky-500/5 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-amber-500/5 blur-[120px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-16">
-          <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-widest mb-3">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+          <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest mb-3">
+            <span className="w-2 h-2 rounded-full bg-amber-400 animate-ping" />
             <span>100% In-Process Architecture</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-white mb-4">
@@ -144,14 +144,14 @@ export function ArchitectureShowcase() {
           <div className="lg:col-span-7 bg-[#0b0c10] border border-white/10 rounded-2xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
             <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
               <div className="flex items-center gap-2">
-                <span className="flex h-2 w-2 rounded-full bg-emerald-400" />
+                <span className="flex h-2 w-2 rounded-full bg-amber-400" />
                 <span className="text-xs font-mono text-neutral-300">CORE PIPELINE MODULES</span>
               </div>
               <button
                 type="button"
                 onClick={handleSimulateOutage}
                 disabled={isSimulating}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium text-emerald-300 bg-emerald-950/80 hover:bg-emerald-900/80 border border-emerald-500/40 transition-all active:scale-95 disabled:opacity-50 cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium text-amber-300 bg-amber-950/80 hover:bg-amber-900/80 border border-amber-500/40 transition-all active:scale-95 disabled:opacity-50 cursor-pointer"
               >
                 <Play className={`w-3 h-3 ${isSimulating ? 'animate-spin' : ''}`} />
                 <span>{isSimulating ? 'Simulating...' : 'Simulate Provider Outage'}</span>
@@ -169,7 +169,7 @@ export function ArchitectureShowcase() {
                     onClick={() => setSelectedModuleId(module.id)}
                     className={`p-4 rounded-xl border transition-all duration-200 cursor-pointer flex items-center justify-between group ${
                       isSelected
-                        ? 'bg-neutral-800/90 border-emerald-500/60 shadow-[0_0_25px_rgba(16,185,129,0.15)] ring-1 ring-emerald-500/40'
+                        ? 'bg-neutral-800/90 border-amber-500/60 shadow-[0_0_25px_rgba(245,158,11,0.15)] ring-1 ring-amber-500/40'
                         : 'bg-neutral-900/40 border-white/[0.08] hover:bg-neutral-900/80 hover:border-white/20'
                     }`}
                   >
@@ -177,7 +177,7 @@ export function ArchitectureShowcase() {
                       <div
                         className={`w-10 h-10 rounded-lg flex items-center justify-center border transition-colors ${
                           isSelected
-                            ? 'bg-emerald-950 border-emerald-500/50 text-emerald-300'
+                            ? 'bg-amber-950 border-amber-500/50 text-amber-300'
                             : 'bg-neutral-950 border-white/10 text-neutral-400 group-hover:text-white'
                         }`}
                       >
@@ -185,7 +185,7 @@ export function ArchitectureShowcase() {
                       </div>
                       <div>
                         <div className="flex items-center gap-2">
-                          <h4 className="text-sm font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                          <h4 className="text-sm font-semibold text-white group-hover:text-amber-400 transition-colors">
                             {module.name}
                           </h4>
                           <span
@@ -194,7 +194,7 @@ export function ArchitectureShowcase() {
                                 ? 'bg-purple-950/70 text-purple-300 border-purple-800/40'
                                 : module.status === 'breaker'
                                 ? 'bg-rose-950/70 text-rose-300 border-rose-800/40'
-                                : 'bg-emerald-950/70 text-emerald-300 border-emerald-800/40'
+                                : 'bg-amber-950/70 text-amber-300 border-amber-800/40'
                             }`}
                           >
                             {module.overhead}
@@ -206,7 +206,7 @@ export function ArchitectureShowcase() {
 
                     <div className="hidden sm:flex flex-col items-end text-right font-mono text-xs">
                       <span className="text-neutral-300">{module.throughput}</span>
-                      <span className="text-[11px] text-emerald-400">Zero Network Hop</span>
+                      <span className="text-[11px] text-amber-400">Zero Network Hop</span>
                     </div>
                   </div>
                 );
@@ -215,8 +215,8 @@ export function ArchitectureShowcase() {
 
             {/* Simulation feedback bar */}
             {simulationLog && (
-              <div className="mt-5 p-3 rounded-lg bg-emerald-950/40 border border-emerald-500/30 flex items-center gap-2.5 text-xs font-mono text-emerald-300 animate-in fade-in duration-200">
-                <Activity className="w-4 h-4 text-emerald-400 animate-pulse shrink-0" />
+              <div className="mt-5 p-3 rounded-lg bg-amber-950/40 border border-amber-500/30 flex items-center gap-2.5 text-xs font-mono text-amber-300 animate-in fade-in duration-200">
+                <Activity className="w-4 h-4 text-amber-400 animate-pulse shrink-0" />
                 <span className="truncate">{simulationLog}</span>
               </div>
             )}
@@ -228,14 +228,14 @@ export function ArchitectureShowcase() {
               <span className="text-xs font-mono uppercase tracking-wider text-neutral-400">
                 MODULE SPECIFICATION
               </span>
-              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-950 text-emerald-400 border border-emerald-800/60">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-mono bg-amber-950 text-amber-400 border border-amber-800/60">
+                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
                 IN-PROCESS
               </span>
             </div>
 
             <div className="flex items-center gap-3.5 mb-5">
-              <div className="w-12 h-12 rounded-xl bg-neutral-950 border border-white/15 flex items-center justify-center text-emerald-400 shadow-md">
+              <div className="w-12 h-12 rounded-xl bg-neutral-950 border border-white/15 flex items-center justify-center text-amber-400 shadow-md">
                 {<selectedModule.icon className="w-6 h-6" />}
               </div>
               <div>
@@ -252,7 +252,7 @@ export function ArchitectureShowcase() {
             <div className="grid grid-cols-2 gap-3 mb-6">
               <div className="p-3 rounded-lg bg-neutral-950/80 border border-white/10">
                 <span className="text-[10px] font-mono uppercase text-neutral-500 block mb-1">Overhead Latency</span>
-                <span className="text-base font-semibold font-mono text-emerald-400">{selectedModule.overhead}</span>
+                <span className="text-base font-semibold font-mono text-amber-400">{selectedModule.overhead}</span>
               </div>
               <div className="p-3 rounded-lg bg-neutral-950/80 border border-white/10">
                 <span className="text-[10px] font-mono uppercase text-neutral-500 block mb-1">Runtime Memory</span>

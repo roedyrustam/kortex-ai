@@ -138,12 +138,12 @@ const client = new SinapsClient({
   return (
     <section id="playground" className="py-24 bg-[#08090a] border-t border-white/[0.08] relative overflow-hidden">
       {/* Background glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-emerald-500/5 blur-[140px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-amber-500/5 blur-[140px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-14">
-          <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-widest mb-3">
+          <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest mb-3">
             <Sparkles className="w-4 h-4" />
             <span>Interactive Laboratory</span>
           </div>
@@ -176,7 +176,7 @@ const client = new SinapsClient({
                   : 'text-neutral-400 hover:text-white'
               }`}
             >
-              <Calculator className="w-3.5 h-3.5 text-emerald-400" />
+              <Calculator className="w-3.5 h-3.5 text-amber-400" />
               <span>Latency & Cost Savings Calculator</span>
             </button>
           </div>
@@ -189,10 +189,10 @@ const client = new SinapsClient({
             <div className="lg:col-span-5 bg-[#0b0c10] border border-white/10 rounded-2xl p-6 sm:p-7 shadow-2xl space-y-6">
               <div className="flex items-center justify-between pb-3 border-b border-white/10">
                 <span className="text-xs font-mono uppercase tracking-wider text-neutral-300 flex items-center gap-2">
-                  <Sliders className="w-3.5 h-3.5 text-emerald-400" />
+                  <Sliders className="w-3.5 h-3.5 text-amber-400" />
                   SIMULATOR CONTROLS
                 </span>
-                <span className="text-[10px] font-mono text-emerald-400">Zero Cloud Hop</span>
+                <span className="text-[10px] font-mono text-amber-400">Zero Cloud Hop</span>
               </div>
 
               {/* Toggles */}
@@ -206,7 +206,7 @@ const client = new SinapsClient({
                     type="checkbox"
                     checked={simulateOutage}
                     onChange={(e) => setSimulateOutage(e.target.checked)}
-                    className="w-4 h-4 accent-emerald-500 rounded cursor-pointer"
+                    className="w-4 h-4 accent-amber-500 rounded cursor-pointer"
                   />
                 </label>
 
@@ -219,7 +219,7 @@ const client = new SinapsClient({
                     type="checkbox"
                     checked={enablePiiVault}
                     onChange={(e) => setEnablePiiVault(e.target.checked)}
-                    className="w-4 h-4 accent-emerald-500 rounded cursor-pointer"
+                    className="w-4 h-4 accent-amber-500 rounded cursor-pointer"
                   />
                 </label>
 
@@ -232,7 +232,7 @@ const client = new SinapsClient({
                     type="checkbox"
                     checked={enableSemanticCache}
                     onChange={(e) => setEnableSemanticCache(e.target.checked)}
-                    className="w-4 h-4 accent-emerald-500 rounded cursor-pointer"
+                    className="w-4 h-4 accent-amber-500 rounded cursor-pointer"
                   />
                 </label>
               </div>
@@ -246,7 +246,7 @@ const client = new SinapsClient({
                   rows={3}
                   value={customPrompt}
                   onChange={(e) => setCustomPrompt(e.target.value)}
-                  className="w-full p-3 rounded-xl bg-neutral-950 border border-white/10 text-neutral-200 text-xs font-mono focus:outline-none focus:border-emerald-500 leading-relaxed resize-none"
+                  className="w-full p-3 rounded-xl bg-neutral-950 border border-white/10 text-neutral-200 text-xs font-mono focus:outline-none focus:border-amber-500 leading-relaxed resize-none"
                 />
               </div>
 
@@ -255,7 +255,7 @@ const client = new SinapsClient({
                 type="button"
                 onClick={handleRunSimulation}
                 disabled={isExecuting}
-                className="w-full py-3 px-4 rounded-xl text-xs font-semibold text-neutral-950 bg-emerald-400 hover:bg-emerald-300 transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(16,185,129,0.3)] disabled:opacity-50 cursor-pointer"
+                className="w-full py-3 px-4 rounded-xl text-xs font-semibold text-neutral-950 bg-amber-400 hover:bg-amber-300 transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(245,158,11,0.3)] disabled:opacity-50 cursor-pointer"
               >
                 <Play className={`w-3.5 h-3.5 ${isExecuting ? 'animate-spin' : ''}`} />
                 <span>{isExecuting ? 'Executing In-Process Routing...' : 'Dispatch Request via SinapsAI'}</span>
@@ -266,7 +266,7 @@ const client = new SinapsClient({
             <div className="lg:col-span-7 bg-[#0b0c10] border border-white/10 rounded-2xl p-6 sm:p-7 shadow-2xl space-y-6">
               <div className="flex items-center justify-between pb-3 border-b border-white/10">
                 <span className="text-xs font-mono uppercase tracking-wider text-neutral-300 flex items-center gap-2">
-                  <Activity className="w-3.5 h-3.5 text-emerald-400" />
+                  <Activity className="w-3.5 h-3.5 text-amber-400" />
                   ROUTING TRACE & DATA PRIVACY AUDIT
                 </span>
                 <span className="text-[11px] font-mono text-neutral-500">Live Visual Inspection</span>
@@ -280,7 +280,7 @@ const client = new SinapsClient({
                       <span className="text-neutral-500">Circuit State:</span>
                       <span className={`px-2 py-0.5 rounded font-semibold ${
                         simResult.circuitState === 'CLOSED'
-                          ? 'bg-emerald-950 text-emerald-400 border border-emerald-800'
+                          ? 'bg-amber-950 text-amber-400 border border-amber-800'
                           : 'bg-rose-950 text-rose-400 border border-rose-800'
                       }`}>
                         {simResult.circuitState}
@@ -289,12 +289,12 @@ const client = new SinapsClient({
 
                     <div className="flex items-center gap-2">
                       <span className="text-neutral-500">Added Overhead:</span>
-                      <span className="text-emerald-400 font-semibold">{simResult.addedLatency}</span>
+                      <span className="text-amber-400 font-semibold">{simResult.addedLatency}</span>
                     </div>
 
                     <div className="flex items-center gap-2">
                       <span className="text-neutral-500">Destination:</span>
-                      <span className="text-sky-300 font-semibold">{simResult.routedTo}</span>
+                      <span className="text-amber-300 font-semibold">{simResult.routedTo}</span>
                     </div>
                   </div>
 
@@ -306,7 +306,7 @@ const client = new SinapsClient({
                   )}
 
                   {simResult.cached && (
-                    <div className="p-2.5 rounded bg-emerald-950/40 border border-emerald-800/40 text-[11px] text-emerald-300 flex items-center gap-2">
+                    <div className="p-2.5 rounded bg-amber-950/40 border border-amber-800/40 text-[11px] text-amber-300 flex items-center gap-2">
                       <CheckCircle2 className="w-3.5 h-3.5 shrink-0" />
                       <span>Zero network calls made. Semantic similarity hit saved 100% provider token cost.</span>
                     </div>
@@ -340,7 +340,7 @@ const client = new SinapsClient({
                 {/* Inbound Restored to Application */}
                 <div className="p-4 rounded-xl bg-neutral-950 border border-white/10 space-y-2">
                   <div className="flex items-center justify-between pb-2 border-b border-white/5 font-mono text-[11px]">
-                    <span className="text-emerald-400 flex items-center gap-1.5">
+                    <span className="text-amber-400 flex items-center gap-1.5">
                       <CheckCircle2 className="w-3 h-3" />
                       Stream Received by Client
                     </span>
@@ -362,7 +362,7 @@ const client = new SinapsClient({
                   <button
                     type="button"
                     onClick={handleCopyCode}
-                    className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 cursor-pointer"
+                    className="flex items-center gap-1 text-amber-400 hover:text-amber-300 cursor-pointer"
                   >
                     {copiedCode ? <Check className="w-3 h-3" /> : <Copy className="w-3 h-3" />}
                     <span>{copiedCode ? 'Copied' : 'Copy TypeScript'}</span>
@@ -385,7 +385,7 @@ const client = new SinapsClient({
                 <div>
                   <div className="flex justify-between items-center mb-2">
                     <label className="text-sm font-semibold text-white">Monthly AI Requests</label>
-                    <span className="text-sm font-mono font-bold text-emerald-400">
+                    <span className="text-sm font-mono font-bold text-amber-400">
                       {monthlyRequests.toLocaleString()} req/mo
                     </span>
                   </div>
@@ -396,7 +396,7 @@ const client = new SinapsClient({
                     step="100000"
                     value={monthlyRequests}
                     onChange={(e) => setMonthlyRequests(Number(e.target.value))}
-                    className="w-full accent-emerald-500 cursor-pointer"
+                    className="w-full accent-amber-500 cursor-pointer"
                   />
                   <div className="flex justify-between text-[10px] font-mono text-neutral-500 mt-1">
                     <span>100k</span>
@@ -434,7 +434,7 @@ const client = new SinapsClient({
                   <p>
                     <strong className="text-white">Why the savings?</strong> External cloud AI proxies (Portkey, Helicone) add a 120ms round-trip hop over public WAN for every call, plus separate hosting costs for LiteLLM Docker containers.
                   </p>
-                  <p className="text-emerald-400 font-mono text-[11px]">
+                  <p className="text-amber-400 font-mono text-[11px]">
                     SinapsAI eliminates intermediary proxy servers completely.
                   </p>
                 </div>
@@ -442,12 +442,12 @@ const client = new SinapsClient({
 
               {/* Calculated Outputs (6 cols) */}
               <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-6 rounded-2xl bg-neutral-900/60 border border-emerald-500/30 flex flex-col justify-between shadow-[0_0_30px_rgba(16,185,129,0.08)]">
+                <div className="p-6 rounded-2xl bg-neutral-900/60 border border-amber-500/30 flex flex-col justify-between shadow-[0_0_30px_rgba(245,158,11,0.08)]">
                   <div>
                     <span className="text-xs font-mono uppercase tracking-wider text-neutral-400 block mb-1">
                       User Latency Saved
                     </span>
-                    <span className="text-3xl font-mono font-bold text-emerald-400 tabular-nums">
+                    <span className="text-3xl font-mono font-bold text-amber-400 tabular-nums">
                       ~{hoursSaved} Hours
                     </span>
                   </div>
@@ -472,7 +472,7 @@ const client = new SinapsClient({
 
                 <div className="sm:col-span-2 p-6 rounded-2xl bg-gradient-to-r from-neutral-900/90 to-neutral-900/40 border border-white/15 flex flex-col sm:flex-row items-center justify-between gap-6">
                   <div>
-                    <span className="text-xs font-mono uppercase tracking-wider text-emerald-400 block mb-1">
+                    <span className="text-xs font-mono uppercase tracking-wider text-amber-400 block mb-1">
                       Estimated Monthly Token Savings
                     </span>
                     <div className="flex items-baseline gap-2">
@@ -490,7 +490,7 @@ const client = new SinapsClient({
                     href="https://github.com/roedyrustam/sinapsai"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-semibold text-neutral-950 bg-emerald-400 hover:bg-emerald-300 transition-all shrink-0 cursor-pointer shadow-lg shadow-emerald-500/20"
+                    className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs font-semibold text-neutral-950 bg-amber-400 hover:bg-amber-300 transition-all shrink-0 cursor-pointer shadow-lg shadow-amber-500/20"
                   >
                     <span>Start Saving with SinapsAI</span>
                     <ArrowRight className="w-3.5 h-3.5" />

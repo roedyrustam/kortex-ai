@@ -90,7 +90,7 @@ export function InteractiveTerminal() {
           </div>
           <div className="h-3 w-[1px] bg-white/10 mx-1.5" />
           <div className="flex items-center gap-1.5 text-xs font-mono text-neutral-400">
-            <Terminal className="w-3.5 h-3.5 text-emerald-400" />
+            <Terminal className="w-3.5 h-3.5 text-amber-400" />
             <span className="text-neutral-300">sinapsai-runtime</span>
             <span className="text-neutral-600">/</span>
             <span className="text-neutral-400">in-process-control-plane</span>
@@ -100,8 +100,8 @@ export function InteractiveTerminal() {
         {/* Telemetry Chips in Header */}
         <div className="flex items-center gap-3">
           <div className="hidden sm:flex items-center gap-2 text-[11px] font-mono text-neutral-400">
-            <span className="inline-flex items-center gap-1 text-emerald-400">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="inline-flex items-center gap-1 text-amber-400">
+              <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
               0 External Proxies
             </span>
             <span className="text-neutral-600">|</span>
@@ -131,7 +131,7 @@ export function InteractiveTerminal() {
               className="p-1 rounded hover:bg-white/10 text-neutral-400 hover:text-white transition-colors"
               title="Copy trace log buffer"
             >
-              {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+              {copied ? <Check className="w-3.5 h-3.5 text-amber-400" /> : <Copy className="w-3.5 h-3.5" />}
             </button>
           </div>
         </div>
@@ -140,7 +140,7 @@ export function InteractiveTerminal() {
       {/* Terminal Body */}
       <div
         ref={scrollContainerRef}
-        className="p-4 sm:p-5 font-mono text-xs sm:text-[13px] leading-relaxed space-y-2 min-h-[220px] max-h-[300px] overflow-y-auto selection:bg-emerald-900/60 selection:text-emerald-200"
+        className="p-4 sm:p-5 font-mono text-xs sm:text-[13px] leading-relaxed space-y-2 min-h-[220px] max-h-[300px] overflow-y-auto selection:bg-amber-900/60 selection:text-amber-200"
       >
         {logs.map((log) => (
           <div key={log.id} className="flex items-start gap-2 group hover:bg-white/[0.02] -mx-2 px-2 py-0.5 rounded transition-colors">
@@ -150,10 +150,10 @@ export function InteractiveTerminal() {
                 log.status === 'breaker'
                   ? 'bg-rose-950/70 text-rose-300 border-rose-800/40'
                   : log.status === 'failover'
-                  ? 'bg-amber-950/70 text-amber-300 border-amber-800/40'
+                  ? 'bg-orange-950/70 text-orange-300 border-orange-800/40'
                   : log.status === 'security'
                   ? 'bg-purple-950/70 text-purple-300 border-purple-800/40'
-                  : 'bg-emerald-950/70 text-emerald-300 border-emerald-800/40'
+                  : 'bg-amber-950/70 text-amber-300 border-amber-800/40'
               }`}
             >
               {log.module}
@@ -171,7 +171,7 @@ export function InteractiveTerminal() {
       {/* Bottom Bar Status Line */}
       <div className="px-4 py-2 bg-neutral-950/80 border-t border-white/5 flex items-center justify-between text-[11px] font-mono text-neutral-500">
         <div className="flex items-center gap-2">
-          <Activity className="w-3 h-3 text-emerald-400" />
+          <Activity className="w-3 h-3 text-amber-400" />
           <span>In-Process Circuit Breaker Engine: Healthy</span>
         </div>
         <div className="flex items-center gap-3">

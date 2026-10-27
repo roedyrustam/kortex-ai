@@ -188,7 +188,7 @@ export function CodeSandbox() {
         {/* Header and Language Selector */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="max-w-xl">
-            <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-widest mb-3">
+            <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest mb-3">
               <Code2 className="w-4 h-4" />
               <span>Standardized TypeScript SDK</span>
             </div>
@@ -231,7 +231,7 @@ export function CodeSandbox() {
               </div>
               <span className="h-3 w-[1px] bg-white/10 mx-2" />
               <span className="font-mono text-xs text-neutral-400 flex items-center gap-1.5">
-                <Terminal className="w-3.5 h-3.5 text-emerald-400" />
+                <Terminal className="w-3.5 h-3.5 text-amber-400" />
                 {activeSnippet.filename}
               </span>
               <span className="hidden sm:inline-block text-[11px] text-neutral-500 font-sans ml-2">
@@ -246,8 +246,8 @@ export function CodeSandbox() {
             >
               {copied ? (
                 <>
-                  <Check className="w-3.5 h-3.5 text-emerald-400" />
-                  <span className="text-emerald-400">Copied</span>
+                  <Check className="w-3.5 h-3.5 text-amber-400" />
+                  <span className="text-amber-400">Copied</span>
                 </>
               ) : (
                 <>

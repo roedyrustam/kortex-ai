@@ -80,4 +80,4 @@ This landing page serves as the primary conversion funnel and developer portal, 
 - **Visual Sanitation (Anti-Slop Pillar 7)**:
   - 1px crisp borders (`border-neutral-800` / `border-neutral-800/60`).
   - Strict typography hierarchy: `Geist Sans` and `Geist Mono` with `tabular-nums` on all data points.
-  - Zero bloated neon gradients or blurry rainbow text. Focused monochromatic aesthetic with emerald accent indicators.
+  - Zero bloated neon gradients or blurry rainbow text. Focused monochromatic aesthetic with Electric Amber & Warm Brass accent indicators.

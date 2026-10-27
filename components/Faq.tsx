@@ -52,7 +52,7 @@ export function Faq() {
     <section id="faq" className="py-24 bg-[#08090a] border-t border-white/[0.08] relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-widest mb-3">
+          <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest mb-3">
             <HelpCircle className="w-4 h-4" />
             <span>Architecture & Gateway FAQ</span>
           </div>
@@ -75,13 +75,13 @@ export function Faq() {
                 <button
                   type="button"
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full px-6 py-4 flex items-center justify-between text-left text-sm sm:text-base font-medium text-white transition-colors hover:text-emerald-400 cursor-pointer"
+                  className="w-full px-6 py-4 flex items-center justify-between text-left text-sm sm:text-base font-medium text-white transition-colors hover:text-amber-400 cursor-pointer"
                   aria-expanded={isOpen}
                 >
                   <span className="pr-4">{faq.question}</span>
                   <ChevronDown
                     className={`w-4 h-4 text-neutral-400 transition-transform duration-200 shrink-0 ${
-                      isOpen ? 'rotate-180 text-emerald-400' : ''
+                      isOpen ? 'rotate-180 text-amber-400' : ''
                     }`}
                   />
                 </button>

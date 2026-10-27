@@ -83,8 +83,8 @@ export function Pricing({ onSelectTier }: PricingProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col items-center text-center max-w-2xl mx-auto mb-16">
-          <div className="flex items-center gap-2 text-xs font-mono text-emerald-400 uppercase tracking-widest mb-3">
-            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+          <div className="flex items-center gap-2 text-xs font-mono text-amber-400 uppercase tracking-widest mb-3">
+            <span className="w-2 h-2 rounded-full bg-amber-400" />
             <span>Open Source & Production Deployment</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight text-white mb-4">
@@ -102,7 +102,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
               key={tier.id}
               className={`rounded-2xl flex flex-col justify-between p-6 sm:p-8 transition-all duration-300 relative ${
                 tier.popular
-                  ? 'bg-gradient-to-b from-neutral-900/90 to-neutral-900/40 border-2 border-emerald-500/50 shadow-[0_0_40px_rgba(16,185,129,0.12)]'
+                  ? 'bg-gradient-to-b from-neutral-900/90 to-neutral-900/40 border-2 border-amber-500/50 shadow-[0_0_40px_rgba(245,158,11,0.12)]'
                   : 'bg-neutral-900/30 border border-white/[0.08] hover:border-white/[0.18]'
               }`}
             >
@@ -110,7 +110,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
                   <span className={`px-3 py-1 rounded-full text-[10px] font-mono uppercase tracking-wider font-semibold ${
                     tier.popular
-                      ? 'bg-emerald-400 text-neutral-950 shadow-md shadow-emerald-500/20'
+                      ? 'bg-amber-400 text-neutral-950 shadow-md shadow-amber-500/20'
                       : 'bg-sky-950 text-sky-300 border border-sky-800'
                   }`}>
                     {tier.badge}
@@ -133,7 +133,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
                 <div className="space-y-3 mb-8">
                   {tier.features.map((feature, i) => (
                     <div key={i} className="flex items-start gap-2.5 text-xs">
-                      <Check className="w-4 h-4 shrink-0 text-emerald-400 mt-0.5" />
+                      <Check className="w-4 h-4 shrink-0 text-amber-400 mt-0.5" />
                       <span className="text-neutral-300">{feature.label}</span>
                     </div>
                   ))}
@@ -145,7 +145,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
                   href={tier.ctaLink}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-semibold text-neutral-950 bg-emerald-400 hover:bg-emerald-300 transition-all shadow-[0_0_20px_-3px_rgba(16,185,129,0.4)] hover:shadow-[0_0_25px_-1px_rgba(16,185,129,0.6)] cursor-pointer"
+                  className="w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-semibold text-neutral-950 bg-amber-400 hover:bg-amber-300 transition-all shadow-[0_0_20px_-3px_rgba(245,158,11,0.4)] hover:shadow-[0_0_25px_-1px_rgba(245,158,11,0.6)] cursor-pointer"
                 >
                   <span>{tier.ctaText}</span>
                   <ChevronRight className="w-3.5 h-3.5" />
@@ -156,7 +156,7 @@ export function Pricing({ onSelectTier }: PricingProps) {
                   onClick={() => onSelectTier(tier.id)}
                   className={`w-full inline-flex items-center justify-center gap-2 py-3 rounded-xl text-xs font-semibold transition-all cursor-pointer ${
                     tier.popular
-                      ? 'text-neutral-950 bg-emerald-400 hover:bg-emerald-300 shadow-[0_0_20px_-3px_rgba(16,185,129,0.4)]'
+                      ? 'text-neutral-950 bg-amber-400 hover:bg-amber-300 shadow-[0_0_20px_-3px_rgba(245,158,11,0.4)]'
                       : 'text-white bg-neutral-800 hover:bg-neutral-700 border border-white/10'
                   }`}
                 >

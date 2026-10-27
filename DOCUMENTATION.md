@@ -73,4 +73,4 @@ c:\Users\roedy\Documents\antigravity\gallant-bell
 ### 3. State Management & Interaction Strategy
 - **Zero-Hydration Bloat**: Components are divided into React Server Components (RSC) for static layouts and lean Client Components (`'use client'`) only where user interaction is required (terminal stream, SDK tabs, pricing toggle, waitlist modal).
 - **No Heavy External Heavyweights**: Using native React 19 primitives (`useState`, `useActionState`, `useTransition`), lightweight Lucide icons, and modern CSS `@keyframes` instead of 500kb JS animation bundles.
-- **Accessible Focus States**: All interactive elements support strict 5-state visuals (Default, Hover, Focus-Visible `ring-2 ring-emerald-500`, Active, Disabled).
+- **Accessible Focus States**: All interactive elements support strict 5-state visuals (Default, Hover, Focus-Visible `ring-2 ring-amber-500`, Active, Disabled).
