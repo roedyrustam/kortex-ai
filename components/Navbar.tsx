@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Terminal, Shield, Cpu, ChevronRight, Menu, X, Sparkles } from 'lucide-react';
+import { Zap, ChevronRight, Menu, X, ExternalLink, ShieldCheck, Sparkles } from 'lucide-react';
+import { GithubIcon } from './GithubIcon';
 
 interface NavbarProps {
   onOpenWaitlist: () => void;
@@ -33,12 +34,15 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
           <div className="flex items-center gap-3">
             <a href="#" className="flex items-center gap-2.5 group">
               <div className="w-8 h-8 rounded-lg bg-neutral-900 border border-white/15 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/50 transition-colors shadow-sm">
-                <Cpu className="w-4 h-4 transition-transform group-hover:scale-110" />
+                <Zap className="w-4 h-4 fill-emerald-400/20 text-emerald-400 transition-transform group-hover:scale-110" />
               </div>
               <div className="flex items-baseline gap-1.5">
-                <span className="font-semibold text-white tracking-tight text-base font-sans">Kortex</span>
+                <span className="font-semibold text-white tracking-tight text-base font-sans">SinapsAI</span>
                 <span className="text-[10px] font-mono font-medium px-1.5 py-0.5 rounded bg-emerald-950/80 text-emerald-400 border border-emerald-500/30">
-                  v2.4
+                  v1.2.0
+                </span>
+                <span className="hidden sm:inline-block text-[10px] font-mono text-neutral-400 px-1 py-0.2 rounded border border-white/5 bg-white/[0.02]">
+                  0 Deps
                 </span>
               </div>
             </a>
@@ -53,22 +57,22 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
               Architecture
             </a>
             <a
-              href="#bento"
+              href="#circuit-breaker"
               className="text-neutral-400 hover:text-white transition-colors duration-200"
             >
-              Core Fabric
+              Circuit Breaker
             </a>
             <a
               href="#sandbox"
               className="text-neutral-400 hover:text-white transition-colors duration-200"
             >
-              SDKs & Sandbox
+              SDK & Examples
             </a>
             <a
-              href="#pricing"
+              href="#benchmarks"
               className="text-neutral-400 hover:text-white transition-colors duration-200"
             >
-              Pricing
+              Benchmarks
             </a>
             <a
               href="#faq"
@@ -81,31 +85,26 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
           {/* Right Action Buttons */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href="https://github.com"
+              href="https://github.com/roedyrustam/sinapsai"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-400 hover:text-white px-2.5 py-1.5 rounded-md hover:bg-neutral-900/80 border border-transparent hover:border-white/10 transition-all"
+              className="inline-flex items-center gap-1.5 text-xs font-mono text-neutral-300 hover:text-white px-3 py-1.5 rounded-md bg-neutral-900/90 hover:bg-neutral-800 border border-white/10 hover:border-white/25 transition-all shadow-sm"
+              title="View SinapsAI on GitHub"
             >
-              <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
-                <path fillRule="evenodd" clipRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-              </svg>
-              <span>4.9k</span>
+              <GithubIcon className="w-3.5 h-3.5" />
+              <span>GitHub</span>
+              <span className="text-[10px] text-emerald-400 font-sans ml-1">★ 404 tests</span>
             </a>
-            <button
-              type="button"
-              onClick={onOpenWaitlist}
-              className="relative inline-flex items-center justify-center gap-2 px-3.5 py-1.5 text-xs font-medium text-white bg-neutral-900 hover:bg-neutral-800 border border-white/15 hover:border-white/25 rounded-md transition-all duration-200 shadow-sm active:scale-95"
-            >
-              <span>Sign In</span>
-            </button>
-            <button
-              type="button"
-              onClick={onOpenWaitlist}
+
+            <a
+              href="https://www.npmjs.com/package/sinapsai"
+              target="_blank"
+              rel="noreferrer"
               className="relative inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 text-xs font-medium text-neutral-950 bg-emerald-400 hover:bg-emerald-300 rounded-md transition-all duration-200 shadow-[0_0_20px_-3px_rgba(16,185,129,0.45)] hover:shadow-[0_0_25px_-1px_rgba(16,185,129,0.6)] active:scale-95 font-sans"
             >
-              <span>Deploy Cluster</span>
+              <span>npm i sinapsai</span>
               <ChevronRight className="w-3.5 h-3.5" />
-            </button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -134,25 +133,25 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
               Architecture
             </a>
             <a
-              href="#bento"
+              href="#circuit-breaker"
               onClick={() => setMobileMenuOpen(false)}
               className="text-neutral-300 hover:text-white py-1"
             >
-              Core Fabric
+              Circuit Breaker
             </a>
             <a
               href="#sandbox"
               onClick={() => setMobileMenuOpen(false)}
               className="text-neutral-300 hover:text-white py-1"
             >
-              SDKs & Sandbox
+              SDK & Examples
             </a>
             <a
-              href="#pricing"
+              href="#benchmarks"
               onClick={() => setMobileMenuOpen(false)}
               className="text-neutral-300 hover:text-white py-1"
             >
-              Pricing
+              Benchmarks
             </a>
             <a
               href="#faq"
@@ -163,16 +162,23 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
             </a>
           </div>
           <div className="pt-2 border-t border-white/10 flex flex-col gap-2">
-            <button
-              type="button"
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenWaitlist();
-              }}
+            <a
+              href="https://github.com/roedyrustam/sinapsai"
+              target="_blank"
+              rel="noreferrer"
+              className="w-full py-2.5 text-xs font-medium text-white bg-neutral-900 border border-white/15 rounded-md transition-colors text-center inline-flex items-center justify-center gap-2"
+            >
+              <GithubIcon className="w-4 h-4" />
+              <span>Star on GitHub</span>
+            </a>
+            <a
+              href="https://www.npmjs.com/package/sinapsai"
+              target="_blank"
+              rel="noreferrer"
               className="w-full py-2.5 text-xs font-medium text-neutral-950 bg-emerald-400 hover:bg-emerald-300 rounded-md transition-colors text-center"
             >
-              Deploy Cluster Free
-            </button>
+              npm install sinapsai
+            </a>
           </div>
         </div>
       )}

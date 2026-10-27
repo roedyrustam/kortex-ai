@@ -1,43 +1,50 @@
-import { Activity, ShieldCheck, Zap, Layers } from 'lucide-react';
+import { Activity, ShieldCheck, Zap, Layers, Sparkles, Cpu } from 'lucide-react';
 
 const METRICS = [
   {
-    label: 'Edge Availability',
-    value: '99.995%',
-    change: '+0.004%',
-    desc: 'Cross-region multi-active failover',
-    icon: Activity,
-  },
-  {
-    label: 'Trace Latency',
-    value: '< 0.82ms',
-    change: 'p99 kernel bypass',
-    desc: 'Sub-millisecond state propagation',
+    label: 'Added Latency',
+    value: '< 8.4ms',
+    change: 'in-process execution',
+    desc: 'No external HTTP proxy hops or container lag',
     icon: Zap,
   },
   {
-    label: 'Autonomous Runs',
-    value: '14.8M+',
-    change: 'per 24h cycle',
-    desc: 'Distributed swarm consensus tasks',
+    label: 'Runtime Dependencies',
+    value: '0 Deps',
+    change: 'pure native fetch',
+    desc: 'Zero bloated npm packages or native C++ addons',
+    icon: ShieldCheck,
+  },
+  {
+    label: 'Automated Test Suite',
+    value: '404/404',
+    change: '100% passing tests',
+    desc: 'Strict TypeScript coverage & multi-runtime tests',
     icon: Layers,
   },
   {
-    label: 'Prompt Drift Rate',
-    value: '0.00%',
-    change: 'deterministic',
-    desc: 'Hardware TEE replay validation',
-    icon: ShieldCheck,
+    label: 'Token Cost Reduction',
+    value: 'Up to 85%',
+    change: 'semantic + prompt cache',
+    desc: 'In-process cosine cache & KV-cache audit',
+    icon: Activity,
   },
 ];
 
-const LOGOS = [
-  'SYNTHESIS', 'VECTORLINE', 'AURAEDGE', 'NEXUSFLOW', 'HYPERSCALE', 'COREQUANT'
+const PROVIDERS = [
+  { name: 'OPENAI', desc: 'GPT-4o, o1, o3-mini' },
+  { name: 'ANTHROPIC', desc: 'Claude 3.7 Sonnet & Haiku' },
+  { name: 'GOOGLE GEMINI', desc: 'Gemini 2.5 & Flash Thinking' },
+  { name: 'GROQ', desc: 'LPU Ultra-Fast Inference' },
+  { name: 'DEEPSEEK', desc: 'DeepSeek R1 & V3' },
+  { name: 'xAI GROK', desc: 'Grok 2 & Grok Vision' },
+  { name: 'OLLAMA', desc: 'Local SLMs & Custom Endpoints' },
+  { name: 'COHERE', desc: 'Command A & Embed v4' },
 ];
 
 export function TelemetryBar() {
   return (
-    <section className="py-16 border-y border-white/[0.08] bg-[#090a0d]/50 relative">
+    <section id="benchmarks" className="py-16 border-y border-white/[0.08] bg-[#090a0d]/50 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Metric Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
@@ -72,19 +79,25 @@ export function TelemetryBar() {
           })}
         </div>
 
-        {/* Social Proof / Partner Logos */}
+        {/* Supported Unified Providers */}
         <div className="flex flex-col items-center">
           <p className="text-xs uppercase font-mono tracking-widest text-neutral-500 mb-6 text-center">
-            Powering Autonomous Agent Fabric at Modern Engineering Orgs
+            Standardized Unified API across 9+ Frontier AI Providers & Local SLMs
           </p>
-          <div className="w-full flex flex-wrap items-center justify-center gap-8 md:gap-14 opacity-50 grayscale hover:opacity-80 transition-opacity">
-            {LOGOS.map((logo, i) => (
-              <span
+          <div className="w-full flex flex-wrap items-center justify-center gap-6 md:gap-10">
+            {PROVIDERS.map((provider, i) => (
+              <div
                 key={i}
-                className="font-mono text-sm tracking-widest text-neutral-300 border-b border-transparent hover:border-neutral-500 transition-colors"
+                className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-900/60 border border-white/5 hover:border-emerald-500/30 transition-all group"
               >
-                // {logo}
-              </span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400/60 group-hover:bg-emerald-400 transition-colors" />
+                <span className="font-mono text-xs tracking-wider text-neutral-300 group-hover:text-white transition-colors">
+                  {provider.name}
+                </span>
+                <span className="text-[10px] text-neutral-500 font-sans hidden sm:inline">
+                  ({provider.desc})
+                </span>
+              </div>
             ))}
           </div>
         </div>

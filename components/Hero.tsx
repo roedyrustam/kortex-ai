@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { ChevronRight, Copy, Check, Terminal, Shield, Zap, Sparkles } from 'lucide-react';
+import { ChevronRight, Copy, Check, Terminal, Shield, Zap, Sparkles, Layers } from 'lucide-react';
+import { GithubIcon } from './GithubIcon';
 import { InteractiveTerminal } from './InteractiveTerminal';
 
 interface HeroProps {
@@ -10,7 +11,7 @@ interface HeroProps {
 
 export function Hero({ onOpenWaitlist }: HeroProps) {
   const [copied, setCopied] = useState(false);
-  const installCmd = 'npm i @kortex/runtime-sdk';
+  const installCmd = 'npm i sinapsai';
 
   const handleCopyCmd = () => {
     navigator.clipboard.writeText(installCmd);
@@ -21,67 +22,74 @@ export function Hero({ onOpenWaitlist }: HeroProps) {
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-radial-vignette">
       {/* Subtle radial ambient highlight */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none -z-10" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[380px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           {/* Release Badge */}
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900/90 border border-white/10 text-xs text-neutral-300 mb-8 shadow-sm backdrop-blur-md hover:border-emerald-500/40 transition-colors">
+          <a
+            href="https://github.com/roedyrustam/sinapsai"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-900/90 border border-white/10 text-xs text-neutral-300 mb-8 shadow-sm backdrop-blur-md hover:border-emerald-500/40 transition-colors group cursor-pointer"
+          >
             <span className="flex h-1.5 w-1.5 rounded-full bg-emerald-400 animate-pulse" />
-            <span className="font-mono text-emerald-400 font-medium">v2.4 LTS</span>
+            <span className="font-mono text-emerald-400 font-medium">v1.2.0 Release</span>
             <span className="text-neutral-500">|</span>
-            <span>Distributed Multi-Agent Consensus Fabric</span>
-            <ChevronRight className="w-3.5 h-3.5 text-neutral-500" />
-          </div>
+            <span>404 Tests Passed • Zero Runtime Dependencies</span>
+            <ChevronRight className="w-3.5 h-3.5 text-neutral-500 group-hover:text-emerald-400 transition-colors" />
+          </a>
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-white max-w-4xl leading-[1.08] mb-6">
-            Autonomous Agent Ops for{' '}
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-semibold tracking-tight text-white max-w-5xl leading-[1.08] mb-6">
+            Universal AI Control Plane & Smart Router for{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-b from-white via-neutral-100 to-neutral-400">
-              High-Scale Engineering
+              Node.js & Edge
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl text-neutral-400 max-w-2xl font-normal leading-relaxed mb-10">
-            Deploy, observe, and deterministically replay multi-agent workflows with sub-millisecond distributed tracing, hardware-isolated zero-trust enclaves, and zero cold starts.
+          <p className="text-base sm:text-lg md:text-xl text-neutral-400 max-w-3xl font-normal leading-relaxed mb-10">
+            A 100% in-process universal AI gateway. Route prompts across OpenAI, Claude, Gemini, DeepSeek, and Groq with in-memory circuit breakers, semantic caching, and reversible PII vaults—without Docker, Redis, or cloud proxy latency.
           </p>
 
           {/* CTA & Actions */}
           <div className="flex flex-col sm:flex-row items-center gap-4 mb-10 w-full sm:w-auto">
+            {/* Quick NPM Copy Pill */}
             <button
               type="button"
-              onClick={onOpenWaitlist}
+              onClick={handleCopyCmd}
+              className="w-full sm:w-auto inline-flex items-center justify-between gap-3 px-5 py-3 rounded-lg bg-neutral-900 hover:bg-neutral-800/90 border border-emerald-500/30 hover:border-emerald-500/50 font-mono text-xs sm:text-sm text-neutral-200 transition-all shadow-[0_0_20px_-5px_rgba(16,185,129,0.25)] group cursor-pointer"
+              title="Copy install command"
+            >
+              <div className="flex items-center gap-2">
+                <span className="text-emerald-400">$</span>
+                <span className="font-semibold">{installCmd}</span>
+              </div>
+              {copied ? (
+                <Check className="w-4 h-4 text-emerald-400" />
+              ) : (
+                <Copy className="w-4 h-4 text-neutral-500 group-hover:text-neutral-300 transition-colors" />
+              )}
+            </button>
+
+            <a
+              href="https://github.com/roedyrustam/sinapsai"
+              target="_blank"
+              rel="noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-semibold text-neutral-950 bg-emerald-400 hover:bg-emerald-300 transition-all duration-200 shadow-[0_0_25px_-4px_rgba(16,185,129,0.5)] hover:shadow-[0_0_35px_-2px_rgba(16,185,129,0.7)] active:scale-[0.98]"
             >
-              <span>Deploy Free Cluster</span>
+              <GithubIcon className="w-4 h-4" />
+              <span>View on GitHub</span>
               <ChevronRight className="w-4 h-4" />
-            </button>
+            </a>
 
             <a
               href="#sandbox"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg text-sm font-medium text-white bg-neutral-900/90 hover:bg-neutral-800 border border-white/15 hover:border-white/30 transition-all duration-200 active:scale-[0.98]"
             >
-              <span>Explore SDKs</span>
+              <span>Explore Code Examples</span>
             </a>
-
-            {/* Quick NPM Copy Pill */}
-            <button
-              type="button"
-              onClick={handleCopyCmd}
-              className="w-full sm:w-auto inline-flex items-center justify-between gap-3 px-4 py-3 rounded-lg bg-neutral-950/80 border border-white/10 hover:border-white/20 font-mono text-xs text-neutral-300 transition-colors group cursor-pointer"
-              title="Copy install command"
-            >
-              <div className="flex items-center gap-2">
-                <span className="text-emerald-400">$</span>
-                <span>{installCmd}</span>
-              </div>
-              {copied ? (
-                <Check className="w-3.5 h-3.5 text-emerald-400" />
-              ) : (
-                <Copy className="w-3.5 h-3.5 text-neutral-500 group-hover:text-neutral-300 transition-colors" />
-              )}
-            </button>
           </div>
 
           {/* Interactive Live Terminal Component */}

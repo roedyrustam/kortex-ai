@@ -1,17 +1,15 @@
-# Kortex AI — Autonomous Agent Infrastructure
+# ⚡ SinapsAI — Landing Page & Developer Portal
 
-Enterprise-grade autonomous AI agent orchestration platform built with Next.js 15, React 19, and Tailwind CSS v4.
+Official interactive landing page and documentation portal for **[SinapsAI](https://github.com/roedyrustam/sinapsai)** — the zero-dependency universal AI control plane and smart router for Node.js, Edge runtimes, and TypeScript.
 
-## 🚀 Features
+## 🚀 Key Highlights Showcased
 
-- **Linear & Vercel Aesthetic**: High-contrast, dark-mode first design crafted for developers and system architects.
-- **Interactive Terminal**: Live simulated agent telemetry and orchestration stream.
-- **Multi-SDK Code Switcher**: Interactive examples for TypeScript, Python, Go, and Rust.
-- **Architecture Node Mesh**: Dynamic SVG-rendered agent fabric visualizer.
-- **Real-Time Telemetry Bar**: P99 latency, cluster availability, and invocation metrics.
-- **Bento Grid Showcase**: Feature deep-dives highlighting zero-trust enclaves and determinism.
-- **Interactive Pricing Matrix**: Monthly/Annual pricing toggles with tier breakdowns.
-- **Waitlist & Lead Intake**: Type-safe Next.js Server Actions with Zod validation.
+- **Linear & Vercel Aesthetic**: High-contrast, dark-mode first design crafted for developers and AI system architects.
+- **Interactive In-Process Terminal**: Live simulated telemetry showing circuit breaker trips, automatic multi-provider failover, PII anonymization, and semantic cache hits.
+- **Architectural Specification Visualizer**: Interactive module inspector covering Smart Router, In-Memory Circuit Breakers, Reversible PII Vault, Semantic Caching, and Speculative Hedging.
+- **Circuit Breaker Interactive State Machine**: Interactive CLOSED, OPEN, and HALF-OPEN state switching.
+- **Multi-Snippet SDK Code Sandbox**: Real TypeScript examples for multi-provider failover, adaptive routing, PII masking, Vercel AI SDK integration, and frontier reasoning.
+- **Real-Time Benchmarks Bar**: Zero-dependency overhead (<8.4ms), 404/404 automated test coverage, and supported LLM providers.
 
 ## 🛠 Tech Stack
 
@@ -20,6 +18,7 @@ Enterprise-grade autonomous AI agent orchestration platform built with Next.js 1
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Typography**: [Geist Sans & Geist Mono](https://vercel.com/font)
+- **Core Library**: [SinapsAI on npm](https://www.npmjs.com/package/sinapsai)
 
 ## 🏃 Getting Started
 
@@ -35,7 +34,7 @@ bun install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the landing page.
 
 ### 3. Production Build
 ```bash
@@ -43,13 +42,11 @@ npm run build
 npm run start
 ```
 
-## 📄 Documentation
+## 🔗 Related Links
 
-- [PRD.md](PRD.md): Product Requirements Document
-- [ERD.md](ERD.md): Entity Relationship & Database Schemas
-- [DOCUMENTATION.md](DOCUMENTATION.md): System Architecture Topology
-- [CONTEXT_MAP.md](CONTEXT_MAP.md): Domain-Driven Context Map
+- **SinapsAI Core Repository**: [https://github.com/roedyrustam/sinapsai](https://github.com/roedyrustam/sinapsai)
+- **npm Package**: [https://www.npmjs.com/package/sinapsai](https://www.npmjs.com/package/sinapsai)
 
 ## 📜 License
 
-MIT License.
+MIT License © [Roedy Rustam](https://github.com/roedyrustam).

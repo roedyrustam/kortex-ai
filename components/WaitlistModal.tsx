@@ -81,10 +81,10 @@ export function WaitlistModal({ isOpen, onClose, defaultPlan }: WaitlistModalPro
             </div>
 
             <h3 className="text-xl font-semibold text-white mb-1.5">
-              Deploy Kortex Cluster
+              Access SinapsAI Edge & Architecture Kit
             </h3>
             <p className="text-xs text-neutral-400 mb-6 leading-relaxed">
-              Get direct API keys to our sub-millisecond edge consensus fabric and Nitro Enclaves.
+              Receive distributed Cloudflare KV/Redis recipes, enterprise compliance guides, and early access to new frontier provider adapters.
             </p>
 
             {errorMessage && (
