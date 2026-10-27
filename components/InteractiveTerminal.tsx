@@ -32,7 +32,7 @@ export function InteractiveTerminal() {
   const [logs, setLogs] = useState<LogLine[]>(INITIAL_LOGS);
   const [isPlaying, setIsPlaying] = useState(true);
   const [copied, setCopied] = useState(false);
-  const terminalEndRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -52,8 +52,7 @@ export function InteractiveTerminal() {
           status: nextTemplate.status,
         };
 
-        const updated = [...prev.slice(-8), newLog];
-        return updated;
+        return [...prev.slice(-10), newLog];
       });
     }, 2400);
 
@@ -61,7 +60,9 @@ export function InteractiveTerminal() {
   }, [isPlaying]);
 
   useEffect(() => {
-    terminalEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTop = scrollContainerRef.current.scrollHeight;
+    }
   }, [logs]);
 
   const handleCopyLogs = () => {
@@ -137,7 +138,10 @@ export function InteractiveTerminal() {
       </div>
 
       {/* Terminal Body */}
-      <div className="p-4 sm:p-5 font-mono text-xs sm:text-[13px] leading-relaxed space-y-2 min-h-[220px] max-h-[300px] overflow-y-auto selection:bg-emerald-900/60 selection:text-emerald-200">
+      <div
+        ref={scrollContainerRef}
+        className="p-4 sm:p-5 font-mono text-xs sm:text-[13px] leading-relaxed space-y-2 min-h-[220px] max-h-[300px] overflow-y-auto selection:bg-emerald-900/60 selection:text-emerald-200"
+      >
         {logs.map((log) => (
           <div key={log.id} className="flex items-start gap-2 group hover:bg-white/[0.02] -mx-2 px-2 py-0.5 rounded transition-colors">
             <span className="text-neutral-500 select-none shrink-0 text-[11px] pt-[1px] tabular-nums">{log.time}</span>
@@ -160,7 +164,6 @@ export function InteractiveTerminal() {
             </span>
           </div>
         ))}
-        <div ref={terminalEndRef} />
       </div>
 
       {/* Bottom Bar Status Line */}

@@ -19,7 +19,7 @@ export function Hero({ onOpenWaitlist }: HeroProps) {
   };
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-grid-pattern bg-radial-vignette">
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-radial-vignette">
       {/* Subtle radial ambient highlight */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-emerald-500/10 blur-[130px] rounded-full pointer-events-none -z-10" />
 

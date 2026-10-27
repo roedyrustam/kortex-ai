@@ -5,6 +5,7 @@ import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { TelemetryBar } from '@/components/TelemetryBar';
 import { BentoGrid } from '@/components/BentoGrid';
+import { ArchitectureShowcase } from '@/components/ArchitectureShowcase';
 import { CodeSandbox } from '@/components/CodeSandbox';
 import { Pricing } from '@/components/Pricing';
 import { Faq } from '@/components/Faq';
@@ -32,6 +33,9 @@ export default function LandingPage() {
 
         {/* Real-time Telemetry Bar & Social Proof */}
         <TelemetryBar />
+
+        {/* Distributed Architecture Fabric Showcase */}
+        <ArchitectureShowcase />
 
         {/* Architecture & Core Bento Grid */}
         <BentoGrid />
