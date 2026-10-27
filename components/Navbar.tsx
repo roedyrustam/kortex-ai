@@ -49,7 +49,13 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
           </div>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8 text-sm">
+          <nav className="hidden md:flex items-center gap-7 text-sm">
+            <a
+              href="#playground"
+              className="text-emerald-400 hover:text-emerald-300 font-medium transition-colors duration-200 flex items-center gap-1"
+            >
+              <span>Playground</span>
+            </a>
             <a
               href="#architecture"
               className="text-neutral-400 hover:text-white transition-colors duration-200"
@@ -125,6 +131,13 @@ export function Navbar({ onOpenWaitlist }: NavbarProps) {
       {mobileMenuOpen && (
         <div className="md:hidden bg-[#08090a] border-b border-white/10 px-4 pt-3 pb-6 space-y-4">
           <div className="flex flex-col space-y-3 text-sm font-medium">
+            <a
+              href="#playground"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-emerald-400 hover:text-emerald-300 font-medium py-1"
+            >
+              Playground & Calculator
+            </a>
             <a
               href="#architecture"
               onClick={() => setMobileMenuOpen(false)}

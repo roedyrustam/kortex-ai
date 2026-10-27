@@ -4,8 +4,9 @@ import { useState } from 'react';
 import { Navbar } from '@/components/Navbar';
 import { Hero } from '@/components/Hero';
 import { TelemetryBar } from '@/components/TelemetryBar';
-import { BentoGrid } from '@/components/BentoGrid';
+import { LivePlayground } from '@/components/LivePlayground';
 import { ArchitectureShowcase } from '@/components/ArchitectureShowcase';
+import { BentoGrid } from '@/components/BentoGrid';
 import { CodeSandbox } from '@/components/CodeSandbox';
 import { Pricing } from '@/components/Pricing';
 import { Faq } from '@/components/Faq';
@@ -33,6 +34,9 @@ export default function LandingPage() {
 
         {/* Real-time Telemetry Bar & Social Proof */}
         <TelemetryBar />
+
+        {/* Interactive In-Process Failover & Cost Playground */}
+        <LivePlayground />
 
         {/* Distributed Architecture Fabric Showcase */}
         <ArchitectureShowcase />
