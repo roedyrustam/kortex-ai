@@ -26,15 +26,15 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Core Engine */}
+          {/* Col 2: Core Engine & Docs */}
           <div className="space-y-3 font-mono">
-            <h4 className="text-white text-xs font-semibold uppercase tracking-wider">Router & Engine</h4>
+            <h4 className="text-white text-xs font-semibold uppercase tracking-wider">Docs & Architecture</h4>
             <ul className="space-y-2 text-xs text-neutral-400">
-              <li><a href="#architecture" className="hover:text-white transition-colors">Adaptive Smart Routing</a></li>
-              <li><a href="#circuit-breaker" className="hover:text-white transition-colors">In-Memory Circuit Breakers</a></li>
-              <li><a href="#sandbox" className="hover:text-white transition-colors">Semantic Vector Caching</a></li>
-              <li><a href="#architecture" className="hover:text-white transition-colors">Reversible PII Vault</a></li>
-              <li><a href="#sandbox" className="hover:text-white transition-colors">Speculative Hedged Requests</a></li>
+              <li><a href="/docs" className="text-amber-400 hover:text-amber-300 font-semibold transition-colors flex items-center gap-1"><span>Technical Documentation</span> →</a></li>
+              <li><a href="/docs#cli-sandbox" className="hover:text-white transition-colors">CLI Sandbox & Diagnostics</a></li>
+              <li><a href="/docs#quickstart" className="hover:text-white transition-colors">Quickstart & Setup</a></li>
+              <li><a href="/docs#circuit-breaker" className="hover:text-white transition-colors">In-Memory Circuit Breakers</a></li>
+              <li><a href="/docs#pii-vault" className="hover:text-white transition-colors">Reversible PII Vault</a></li>
             </ul>
           </div>
 
